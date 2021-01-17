@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./category_styles.css";
 import ic from './icons/category/food_light.png';
-import menu from './icons/menu.png' 
+import menu from './icons/menu.png'; 
 
 class Category extends Component{
 
@@ -17,16 +17,17 @@ class Category extends Component{
 
 
 	render(){
+		console.log(this.props);
 		return (
 			<div className= 'categoryRow'>
-				<div className = 'category' onClick={()=> console.log(ic)}>
-				<img className= 'icon' src={this.state.icon}  alt ='icon' /> 									
+				<div className= 'category'>
+				<img className= 'icon' src={ic}  alt ='icon' /> 									
 					<div className= 'name'>
-						<p>food</p>
+						<p>{this.props.cat.name}</p>
 					</div>
 				</div>
 				<div className= 'description'>
-					<p>bought on the market</p>
+					<p>{this.props.cat.description}</p>
 				</div>				
 				<div className= 'action'>
 					<button type='button' className= 'btnAction'>

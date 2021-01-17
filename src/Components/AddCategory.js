@@ -23,11 +23,13 @@ setInformation = async (e) =>{
 	await this.setState({name: e.target.elements.name.value});
 	await this.setState({description: e.target.elements.description.value});
 	await this.setState({id: this.props.getID()})	
-	console.log(this.state.name);
+	/*console.log(this.state.name);
 	console.log(this.state.description);
-	console.log(this.state.id);	
+	console.log(this.state.id);*/
+	this.props.addData(this.state);	
 };
 
+addData = ()=> {};
 
 render(){
 	return (
@@ -42,7 +44,7 @@ render(){
 				<p>Description:</p>
 				<input className='inpDescr' type='text'  name='description'/>				
 			</div>
-			<button type='submit' className='btnAddNew'>add new category</button>
+			<button type='submit' className='btnAddNew' >add new category</button>
 		</form>
 		</div>
 		)

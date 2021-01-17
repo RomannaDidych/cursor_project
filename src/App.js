@@ -1,23 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import Category from './Components/Category.js';
+/*import Category from './Components/Category.js';
 import CategoruPageHeader from './Components/CategoryPageHeader';
-import CategoryTableTitle from './Components/CategoryTableTitle';
-import AddCategory from './Components/AddCategory';
+import CategoryTableTitle from './Components/CategoryTableTitle';*/
+import ShowCategoryPage from './Components/ShowCategoryPage';
 
-function App() {
-
-  function createIdGenerator(){
-  let count = 1;
-  return function(){ return count++}
-}
+function App() {  
 
   return (
     <div className="App">
-      <CategoruPageHeader />
-      <CategoryTableTitle />
-      <Category />
-      <AddCategory getID = {createIdGenerator()}/>
+      <ShowCategoryPage />      
     </div>
   );
 }
