@@ -5,14 +5,14 @@ import menu from './icons/menu.png'
 
 class Category extends Component{
 
-	state = {
+	/*state = {
 		id: '',
 		type: '',
 		icon: ic, //url
 		iconColor: '',
 		name: '',
 		description: ''
-	}
+	}*/
 
 
 

@@ -6,12 +6,18 @@ import CategoryTableTitle from './Components/CategoryTableTitle';
 import AddCategory from './Components/AddCategory';
 
 function App() {
+
+  function createIdGenerator(){
+  let count = 1;
+  return function(){ return count++}
+}
+
   return (
     <div className="App">
       <CategoruPageHeader />
       <CategoryTableTitle />
       <Category />
-      <AddCategory />
+      <AddCategory getID = {createIdGenerator()}/>
     </div>
   );
 }

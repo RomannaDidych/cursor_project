@@ -8,12 +8,11 @@ class AddCategory extends Component{
 		type: '',
 		icon: '', //url
 		iconColor: '',
-		name: 'a',
+		name: '',
 		description: ''
 	}
 
 
-generateID = () => {};
 
 
 
@@ -22,11 +21,11 @@ setInformation = async (e) =>{
 	const inpN = e.target.elements.name.value;
 	const inpD = e.target.elements.description.value;
 	await this.setState({name: e.target.elements.name.value});
-	await this.setState({description: e.target.elements.description.value});	
+	await this.setState({description: e.target.elements.description.value});
+	await this.setState({id: this.props.getID()})	
 	console.log(this.state.name);
-	console.log(this.state.description)
-
-	
+	console.log(this.state.description);
+	console.log(this.state.id);	
 };
 
 
